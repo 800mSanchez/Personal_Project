@@ -31,7 +31,7 @@ class Login extends React.Component {
         const {email, password} = this.state;
         axios.post('/auth/login', {email, password}).then(res => {
             this.props.loginUser(res.data);
-            this.props.history.push('/store')
+            this.props.history.push('/storefront')
         }).catch(err => {
             console.log(err);
             alert('Login Failed')
@@ -42,7 +42,7 @@ class Login extends React.Component {
         const {email, password} = this.state;
         axios.post('/auth/register', {email, password}).then(res => {
             this.props.loginUser(res.data);
-            this.props.history.push('/store');
+            this.props.history.push('/storefront');
         }).catch(err => {
             console.log(err);
             alert('Register Failed')
@@ -53,7 +53,7 @@ class Login extends React.Component {
         const {email, password} = this.state;
         return <div className="log">
                 <div className="login-container">
-                    <h1>Local</h1>
+                    <h1>Nabe</h1>
                     {!this.state.newUser ?
                     <div>
                        <input onChange={e => this.changeHandler(e)} name="email" type="text" value={email} placeholder="Email"/>

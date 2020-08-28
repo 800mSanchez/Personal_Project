@@ -1,0 +1,38 @@
+.log {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(  #a270ff  , #3722af, #0c4070);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+   }
+   
+   .login-container {
+       width: 30vh;
+       height: 20vw;
+       box-shadow:  0 20px 40px 0 black;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       border-radius: 8px;
+       padding: 20px;
+   }
+   
+   .button {
+       display: flex;
+       justify-content: space-between;
+       width: 100px;
+       background-color: white;
+       color: black;
+       border: 2px solid black;
+   }
+
+   h1 {
+       font-family: 'Fredoka One', cursive;
+       color: #3722af;
+       -webkit-text-stroke-color: white;
+       -webkit-text-stroke-width: 2px;
+   }
