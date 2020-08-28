@@ -1,5 +1,11 @@
 #### MVP
 
+- The ability to search for a product
+- The ability to add,edit,delete product to a cart.
+- The ability to choose the state to “shop local”.
+- There will be a login/register page to access more of the website.
+
+
 #### Database
 - Schemas: 
 
@@ -43,4 +49,4 @@ CREATE TABLE cartItems (
 
 
 
-#### Front-end# Personal_Project
+#### Front-end
