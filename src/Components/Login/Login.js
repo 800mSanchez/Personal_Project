@@ -53,7 +53,7 @@ class Login extends React.Component {
         const {email, password} = this.state;
         return <div className="log">
                 <div className="login-container">
-                    <h1>Nabe</h1>
+                    <h1>Locale</h1>
                     {!this.state.newUser ?
                     <div>
                        <input onChange={e => this.changeHandler(e)} name="email" type="text" value={email} placeholder="Email"/>
