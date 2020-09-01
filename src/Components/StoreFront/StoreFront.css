@@ -1,0 +1,20 @@
+.storeFront {
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(  #a270ff  , #3722af, #0c4070);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: xx-large;
+}
+
+.product-area {
+    display: flex;
+    justify-content: right;
+}
+
+.image {
+    height: 60px;
+    width: 60px;
+}
