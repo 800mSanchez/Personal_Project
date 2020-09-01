@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 
-class Store extends React.Component {
+class StoreFront extends React.Component {
     constructor(props){
         super(props)
         this.state = {
@@ -21,12 +21,22 @@ class Store extends React.Component {
           })
         }).catch(err => console.log(err))
       }
-    
+
+
+      
+
     render() {
-        return (
+      console.log(this.state.inventory)
+      let allInventory = this.state.inventory.map(e => {
+      return <div>{e.title}</div>
+      })
+        return <div>
         <div> This is the StoreFront</div>
-        )
+        <div>{allInventory}</div>
+        </div>
     }
 }
 
-export default Store;
+const mapStateToProps = state => state;
+
+export default connect (mapStateToProps)(StoreFront);
