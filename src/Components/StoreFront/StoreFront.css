@@ -1,20 +1,31 @@
-.storeFront {
+* {
+    border: 1px solid red !important;
+ }
+
+.storeContainer {
     width: 100vw;
     height: 100vh;
     background-image: linear-gradient(  #a270ff  , #3722af, #0c4070);
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     color: white;
     font-size: xx-large;
 }
 
-.product-area {
+.inventory {
     display: flex;
-    justify-content: right;
+    justify-content: left;
+    flex-wrap: wrap;
 }
 
 .image {
     height: 60px;
     width: 60px;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+
 }
