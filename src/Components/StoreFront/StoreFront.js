@@ -43,7 +43,7 @@ class StoreFront extends React.Component {
         {e.location}
         {e.description}
         <img className="image" src={e.image} alt="a cherry oak chair" />
-        <button onClick={this.addToCart}>Add To Cart</button>
+        <button onClick={this.addToCart}>Add</button>
       </div>
     })
     return <div className="storeContainer">
