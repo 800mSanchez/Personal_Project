@@ -1,5 +1,13 @@
 module.exports = {
 
+    addToCart: (req,res) => {
+        const {cart_id, product_id, quantity} = req.body
+        const db = req.app.get("db");
+        db.addToCart([cart_id, product_id, quantity]).then(inventory => {
+            res.status(200).send(inventory)
+        }).catch( err => console.log(err));
+    },
+
     deleteProduct: (req, res) => {
         const { product_id } = req.params
         const db = req.app.get("db");

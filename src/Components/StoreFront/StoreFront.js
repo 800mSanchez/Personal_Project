@@ -26,7 +26,7 @@ class StoreFront extends React.Component {
 
   addToCart = () => {
     const { inventory } = this.state;
-    axios.post('./store/product', { inventory }).then(res => {
+    axios.post('/cart/product', { inventory }).then(res => {
       this.props.addToCart(res.data);
     }).catch(err => {
       console.log(err);
