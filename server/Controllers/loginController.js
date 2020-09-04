@@ -27,14 +27,18 @@ module.exports = {
         const db = req.app.get('db');
         const {email, password} = req.body;
         const user = await db.check_user(email);
+        console.log(user)
         if(!user[0]){
             return res.status(401).send('Incorrect credentials');
         } else {
            const authenticated = bcrypt.compareSync(password, user[0].password);
            if(authenticated){
+               const [cart_id] = await db.get_cart(user[0].user_id)
+               console.log(cart_id)
                req.session.user = {
                    userId: user[0].user_id,
-                   email: user[0].email
+                   email: user[0].email,
+                   cartId: cart_id.cart_id
                }
                res.status(200).send(req.session.user)
            } else {

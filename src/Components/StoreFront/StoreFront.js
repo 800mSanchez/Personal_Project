@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { addToCart } from '../../Store/storefrontReducer';
 import './StoreFront.css'
 import Header from './Header';
 
@@ -24,9 +25,8 @@ class StoreFront extends React.Component {
     }).catch(err => console.log(err))
   }
 
-  addToCart = () => {
-    const { inventory } = this.state;
-    axios.post('/cart/product', { inventory }).then(res => {
+  addToCart = (product_id) => {
+    axios.post('/cart/product', { product_id, quantity: 1 }).then(res => {
       this.props.addToCart(res.data);
     }).catch(err => {
       console.log(err);
@@ -43,7 +43,7 @@ class StoreFront extends React.Component {
         {e.location}
         {e.description}
         <img className="image" src={e.image} alt="a cherry oak chair" />
-        <button onClick={this.addToCart}>Add</button>
+        <button onClick={ () => this.addToCart(e.product_id)}>Add</button>
       </div>
     })
     return <div className="storeContainer">
@@ -59,4 +59,4 @@ class StoreFront extends React.Component {
 
 const mapStateToProps = state => state;
 
-export default connect(mapStateToProps)(StoreFront);
+export default connect(mapStateToProps, {addToCart})(StoreFront);

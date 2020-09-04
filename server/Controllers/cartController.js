@@ -1,7 +1,9 @@
 module.exports = {
 
     addToCart: (req,res) => {
-        const {cart_id, product_id, quantity} = req.body
+        const {product_id, quantity} = req.body
+        const {cart_id} = req.session.user
+        console.log(req.session)
         const db = req.app.get("db");
         db.addToCart([cart_id, product_id, quantity]).then(inventory => {
             res.status(200).send(inventory)
