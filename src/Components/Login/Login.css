@@ -1,17 +1,17 @@
 .log {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(  #a270ff  , #3722af, #0c4070);
+    background-image: URL('../../moroccan-flower-dark.png')/*  linear-gradient(  #a270ff  , #3722af, #0c4070) */;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     font-size: xx-large;
    }
-   
+
    .login-container {
-       width: 30vh;
-       height: 20vw;
+       width: 150vh;
+       height: 40vw;
        box-shadow:  0 20px 40px 0 black;
        display: flex;
        flex-direction: column;
@@ -20,19 +20,65 @@
        border-radius: 8px;
        padding: 20px;
    }
+
+   .email {
+       display: flex;
+       background: none;
+       font-size: x-large;
+       background-color: white;
+   }
+
+   .password {
+       display: flex;
+       background: none;
+       font-size: x-large;
+       background-color: white;
+   }
    
    .button {
-       display: flex;
-       justify-content: space-between;
+       display: inline-flex;
+       border: none;
+       padding: 10px;
        width: 100px;
-       background-color: white;
        color: black;
-       border: 2px solid black;
+   }
+
+   .log-btn {
+       display: flex;
+       margin: 40px;
+       background: none;
+       font-size: large;
+   }
+
+   .sign-btn {
+        display: flex;
+        margin: 40px;
+        background: none;
+        font-size: large;
+   }
+
+   .email_two {
+        display: flex;
+        background: none;
+        font-size: x-large;
+   }
+
+   .password_two {
+        display: flex;
+        background: none;
+        font-size: x-large;
+   }
+
+   .register_btn {
+        display: flex;
+        margin: 40px;
+        background: none;
+        font-size: large;
    }
 
    h1 {
        font-family: 'Fredoka One', cursive;
-       color: #3722af;
+       color: white;
        -webkit-text-stroke-color: white;
        -webkit-text-stroke-width: 2px;
    }

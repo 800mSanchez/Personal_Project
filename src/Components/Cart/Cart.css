@@ -1,0 +1,10 @@
+.cart-container {
+    width: 100vw;
+    height: 100vh;
+    background-image: URL('../../moroccan-flower-dark.png');
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    font-size: xx-large;
+}
