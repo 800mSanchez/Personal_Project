@@ -54,7 +54,7 @@ class Login extends React.Component {
         return <div className="log">
                 <div className="login-container">
                     <h1>Locale</h1>
-                        <h2>Shop local, nationwide!</h2>
+                        <h2 className="text">Shop local, nationwide!</h2>
                     {!this.state.newUser ?
                     <div>
                        <input className="email" onChange={e => this.changeHandler(e)} name="email" type="text" value={email} placeholder="Email"/>

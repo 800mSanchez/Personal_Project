@@ -82,3 +82,9 @@
        -webkit-text-stroke-color: white;
        -webkit-text-stroke-width: 2px;
    }
+
+   @media (max-width: 1000px){
+    .login-container {
+        box-shadow: none;
+}
+   }
