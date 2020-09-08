@@ -12,7 +12,7 @@ CREATE TABLE products (
     location VARCHAR(60),
     description TEXT,
     image TEXT,
-    user_id INT REFERENCES users(user_id)
+    /* user_id INT REFERENCES users(user_id) */
 )
 
 

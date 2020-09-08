@@ -35,7 +35,8 @@ app.get('/auth/user', ctrl.getUser)
 app.get('/store/inventory', storeCtrl.getProducts);
 app.post('/store/product', storeCtrl.addProduct);
 
-app.post('/cart/product', cartCtrl.addToCart)
+app.get('/cart/inventory', cartCtrl.getCart);
+app.post('/cart/product', cartCtrl.addToCart);
 app.delete(`/cart/product/:product_id`, cartCtrl.deleteProduct);
 /* app.put(`/cart/product/:id`, controller.editProduct); */
 

@@ -1,11 +1,12 @@
 .log {
     width: 100vw;
     height: 100vh;
-    background-image: URL('../../moroccan-flower-dark.png')/*  linear-gradient(  #a270ff  , #3722af, #0c4070) */;
+    background-image: URL('../../bean.png');
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: black;
     font-size: xx-large;
    }
 
@@ -26,6 +27,7 @@
        background: none;
        font-size: x-large;
        background-color: white;
+       border-radius: 10%;
    }
 
    .password {
@@ -33,6 +35,7 @@
        background: none;
        font-size: x-large;
        background-color: white;
+       border-radius: 10%;
    }
    
    .button {
@@ -78,8 +81,7 @@
 
    h1 {
        font-family: 'Fredoka One', cursive;
-       color: white;
-       -webkit-text-stroke-color: white;
+       color: black;
        -webkit-text-stroke-width: 2px;
    }
 

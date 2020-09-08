@@ -5,11 +5,12 @@
 .storeContainer {
     width: 100vw;
     height: 100vh;
-    background-image: URL('../../moroccan-flower-dark.png');
+    background-image: URL('../../bean.png');
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color: white;
+    color: wheat;
     font-size: xx-large;
 }
 

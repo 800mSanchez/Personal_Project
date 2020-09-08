@@ -33,7 +33,7 @@ module.exports = {
         } else {
            const authenticated = bcrypt.compareSync(password, user[0].password);
            if(authenticated){
-               const [cart_id] = await db.get_cart(user[0].user_id)
+               const [cart_id] = await db.get_user_cartId(user[0].user_id)
                console.log(cart_id)
                req.session.user = {
                    userId: user[0].user_id,
