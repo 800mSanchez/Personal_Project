@@ -4,6 +4,7 @@
     background-image: URL('../../bean.png');
     background-size: cover;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -12,6 +13,13 @@
 }
 
 .welcome {
-    display: flex;
-    justify-content: center;
+    position: relative;
+    top: -250px;
+    
+}
+
+.cart_inventory {
+    margin: 20px;
+    padding: 20px;
+    background-color: wheat;
 }

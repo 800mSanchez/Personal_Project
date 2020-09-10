@@ -8,16 +8,28 @@
     background-image: URL('../../bean.png');
     background-size: cover;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    color: wheat;
-    font-size: xx-large;
+    /* flex-wrap: wrap; */
+   /*  justify-content: center; */
+    /* color: black; */
+   /*  background-color: wheat; */
 }
 
 .inventory {
-    display: flex;
+    /* display: flex;
     justify-content: left;
     flex-wrap: wrap;
+    background-color: wheat; */
+    width: 90vh;
+       height: 30vw;
+       box-shadow:  0 20px 40px 0 black;
+       display: flex;
+       flex-direction: column;
+       justify-content: space-around;
+       align-items: center;
+       border-radius: 8px;
+       padding: 20px;
+       background-blend-mode: darken;
+       font-size: small;
 }
 
 .image {
@@ -27,6 +39,9 @@
 
 .header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-content: center;
+    font-size: xx-large;
 
 }

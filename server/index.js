@@ -1,5 +1,7 @@
 require('dotenv').config();
 const express = require('express');
+/* cors = require("cors"); */
+/* const aws = require("aws-sdk"); */
 const session = require('express-session');
 const massive = require('massive');
 const app = express();
@@ -8,8 +10,11 @@ const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env;
 const ctrl = require('./Controllers/loginController');
 const storeCtrl = require('./Controllers/storeController');
 const cartCtrl = require('./Controllers/cartController');
+const bucketCtrl = require('./Controllers/bucketController');
 
+/* app.use(cors()); */
 app.use(express.json());
+app.use(express.static(`${__dirname}/../build`));
 app.use(session({
     resave: false,
     saveUninitialized: true,
@@ -26,6 +31,8 @@ massive({
         app.set('db', db)
         console.log('connected to db')
     }).catch( err => console.log(err))
+
+app.get('/store/images', bucketCtrl.getImages);    
 
 app.post('/auth/login', ctrl.login)
 app.post('/auth/register', ctrl.register)

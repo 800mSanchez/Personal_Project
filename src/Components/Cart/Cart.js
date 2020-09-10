@@ -30,13 +30,12 @@ class Cart extends React.Component {
             return <div>
                 {e.title} {e.price}
                 {e.quantity}
-                <img className="image" src={e.image} alt="a cherry oak chair" />
             </div>
         })
         return (
         <div className="cart-container">
             <div className="welcome">Welcome To Your Cart</div>
-            <div>
+            <div className="cart_inventory">
             {cartInventory}
             </div>
         </div>
