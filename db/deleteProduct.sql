@@ -1,1 +1,1 @@
-DELETE FROM products WHERE product_id = $1;
+DELETE FROM cartItems WHERE cart_item_id = $1;

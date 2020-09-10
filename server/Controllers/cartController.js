@@ -20,16 +20,21 @@ module.exports = {
     },
 
     deleteProduct: (req, res) => {
-        const { product_id } = req.params
+        const { cart_item_id } = req.params
+        console.log(cart_item_id)
         const db = req.app.get("db");
-        db.deleteProduct([product_id]).then(() => {
+        db.deleteProduct([cart_item_id]).then(() => {
             res.sendStatus(200);
         }).catch( err => console.log(err))
     },
 
-    /* editProduct: (req, res) => {
-        const { product_id } = req.params
+    editQuantity: (req, res) => {
+        const { id } = req.params;
+        const {cartId} = req.session.user
+        const { quantity } = req.body
         const db = req.app.get("db");
-        db.editProduct
-    } */
+        db.editQuantity([id, quantity, cartId]).then((cart) => {
+            res.status(200).send(cart);
+        });
+    }
 }

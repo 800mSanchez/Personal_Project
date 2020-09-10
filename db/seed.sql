@@ -68,9 +68,11 @@ CREATE TABLE cartItems (
                 quantity INT
             );
 
-            INSERT INTO products (title, price, location, description, image)
+            INSERT INTO products (title, price, location, description)
             VALUES ('Kitchen Chair   ', 125, '   Plano, Texas   ', '   Beautiful handcrafted kitchen chairs made from cherry oak   '), /* '   https://images-na.ssl-images-amazon.com/images/I/712MexCjtFL._AC_SL1500_.jpg'), */
                    ('Harry Potter Collection   ', 85, '   Boise,Idaho   ', '   The complete Harry Potter book series from your local bookstore here in Boise, Idaho. The condition is like new.   '),/*  '   https://m.media-amazon.com/images/I/81gvKPsewML._AC_SS350_.jpg'), */
-                   ('Halo 5   ', 20, '   Flagstaff, Arizona   ', '   Get the fifth installment of the Halo franchise for Xbox One.   ');/* , '   https://images-na.ssl-images-amazon.com/images/I/71jUlLTTl3L._SX342_.jpg'); */
+                   ('Halo 5   ', 20, '   Flagstaff, Arizona   ', '   Get the fifth installment of the Halo franchise for Xbox One.   '),/* , '   https://images-na.ssl-images-amazon.com/images/I/71jUlLTTl3L._SX342_.jpg'); */
+                   ('Red Sofa', 600, 'Las Vegas, Nevada', 'Famous Red Sofa from MGM Grand'),
+                   ('Kayak', 75, 'Denver, Colorado', 'Like new Kayak that seats 2!');
            
             SELECT * FROM products;

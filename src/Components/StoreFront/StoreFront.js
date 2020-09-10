@@ -13,7 +13,8 @@ class StoreFront extends React.Component {
     super(props)
     this.state = {
       inventory: [],
-      isUploading: false
+      isUploading: false,
+      url: 'http://via.placeholder.com/250x250'
     }
     this.getInventory = this.getInventory.bind(this)
   }
@@ -38,6 +39,34 @@ class StoreFront extends React.Component {
       console.log(err)
     })
  }
+
+ uploadFile = (file, signedRequest, url) => {
+  const options = {
+    headers: {
+      'Content-Type': file.type,
+    },
+  };
+
+  axios.put(signedRequest, file, options)
+      .then(res => {
+        this.setState({ isUploading: false, url });
+        // THEN DO SOMETHING WITH THE URL. SEND TO DB USING POST REQUEST OR SOMETHING
+      })
+      .catch(err => {
+        this.setState({
+          isUploading: false,
+        });
+        if (err.res.status === 403) {
+          alert(
+            `Your request for a signed URL failed with a status 403. Double check the CORS configuration and bucket policy in the README. You also will want to double check your AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in your .env and ensure that they are the same as the ones that you created in the IAM dashboard. You may need to generate new keys\n${
+              err.stack
+            }`
+          );
+        } else {
+          alert(`ERROR: ${err.status}\n ${err.stack}`);
+        }
+      });
+  };
 
   getInventory() {
     axios.get("/store/inventory").then(res => {
