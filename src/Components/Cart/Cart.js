@@ -28,19 +28,20 @@ class Cart extends React.Component {
 
     render(){
         let cartInventory = this.state.cart.map(e => {
-            return <div>
-                {e.title} {e.price}
-                {e.quantity}
-            </div>
+            return <div className="bunch">
+                    <div>Title: {e.title}</div>
+                    <div>Price: ${e.price}</div>
+                    <div>Quantity: {e.quantity}</div>
+                  </div>
         })
         return (
-        <div className="cart-container">
-            <div className="welcome">Welcome To Your Cart</div>
+            <div className="cart-container">
+            <h3 className="welcome">Welcome To Your Cart</h3>
             <div className="cart_inventory">
             {cartInventory}
             </div>
             {/* <Stripe/> */}
-        </div>
+         </div>
         )
     }
 }    

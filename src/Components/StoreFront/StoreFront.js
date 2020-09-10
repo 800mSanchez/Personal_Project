@@ -62,9 +62,10 @@ class StoreFront extends React.Component {
     console.log(this.state.inventory)
     let allInventory = this.state.inventory.map(e => {
       return <div>
-        {e.title} {e.price}
-        {e.location}
-        {e.description}
+              <div>Title: {e.title}</div>
+              <div>Price: ${e.price}</div>
+              <div>Location: {e.location}</div>
+              <div>Description: {e.description}</div>
         <Dropzone
         className="drop-zone"
         onDropAccepted={this.getSignedRequest}
@@ -89,13 +90,14 @@ class StoreFront extends React.Component {
         </div>
         )}
     </Dropzone> 
-        <button onClick={ () => this.addToCart(e.product_id)}>Add</button>
+        <button className="add-btn" onClick={ () => this.addToCart(e.product_id)}>Add</button>
       </div>
     })
     return <div className="storeContainer">
       <div className='header'>
         <Header/>
       </div>
+      <p>Shop Local Business Nationwide</p>
       <div className="inventory">
         {allInventory}
       </div>

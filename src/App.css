@@ -1,7 +1,10 @@
 html { 
-  background: url(cool-background.png) no-repeat center center fixed; 
-  -webkit-background-size: cover;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: url(bean.png) no-repeat center fixed; 
+ /*  -webkit-background-size: cover;
   -moz-background-size: cover;
-  -o-background-size: cover;
+  -o-background-size: cover; */
   background-size: cover;
 }
