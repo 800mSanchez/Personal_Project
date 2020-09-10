@@ -6,13 +6,19 @@ const session = require('express-session');
 const massive = require('massive');
 const app = express();
 
+const { resolve } = require('path')
+const stripe = require("stripe")("sk_test_4eC39HqLyjWDarjtT1zdp7dc");
+
 const {CONNECTION_STRING, SESSION_SECRET, SERVER_PORT} = process.env;
 const ctrl = require('./Controllers/loginController');
 const storeCtrl = require('./Controllers/storeController');
 const cartCtrl = require('./Controllers/cartController');
 const bucketCtrl = require('./Controllers/bucketController');
+const stripeCtrl = require('./Controllers/stripeController');
+/* const { default: Stripe } = require('stripe'); */
 
 /* app.use(cors()); */
+app.use(express.static("."));
 app.use(express.json());
 app.use(express.static(`${__dirname}/../build`));
 app.use(session({
@@ -31,6 +37,8 @@ massive({
         app.set('db', db)
         console.log('connected to db')
     }).catch( err => console.log(err))
+
+app.post("/create-payment-intent", stripeCtrl.Stripe);   
 
 app.get('/store/images', bucketCtrl.getImages);    
 

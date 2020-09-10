@@ -3,6 +3,7 @@ import './Cart.css';
 import { connect } from 'react-redux';
 import { getCart } from '../../Store/cartReducer';
 import axios from 'axios';
+/* import Stripe from './Stripe'; */
 
 class Cart extends React.Component {
     constructor(props){
@@ -38,6 +39,7 @@ class Cart extends React.Component {
             <div className="cart_inventory">
             {cartInventory}
             </div>
+            {/* <Stripe/> */}
         </div>
         )
     }

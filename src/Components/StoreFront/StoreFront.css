@@ -1,13 +1,13 @@
 /* * {
     border: 1px solid red !important;
- }
- */
+ } */
+
 .storeContainer {
     width: 100vw;
     height: 100vh;
     background-image: URL('../../bean.png');
     background-size: cover;
-    display: flex;
+    display: inline-block;
     /* flex-wrap: wrap; */
    /*  justify-content: center; */
     /* color: black; */
@@ -23,25 +23,22 @@
        height: 30vw;
        box-shadow:  0 20px 40px 0 black;
        display: flex;
+       margin: auto;
        flex-direction: column;
        justify-content: space-around;
        align-items: center;
        border-radius: 8px;
        padding: 20px;
-       background-blend-mode: darken;
-       font-size: small;
+       font-size: medium;
+       color: white;;
 }
-
-.image {
-    height: 60px;
-    width: 60px;
-}
-
 .header {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-content: center;
     font-size: xx-large;
+   /*  background-color: violet; */
+    
 
 }
