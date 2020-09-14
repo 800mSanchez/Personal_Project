@@ -1,12 +1,10 @@
 .log {
     width: 100vw;
     height: 100vh;
-    background-image: URL('../../bean.png');
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: rgb(245, 241, 241);
     font-size: xx-large;
    }
 
@@ -20,7 +18,7 @@
        align-items: center;
        border-radius: 8px;
        padding: 20px;
-       background-color: wheat;
+       background: linear-gradient(#00143e , #0f315f);
    }
 
    .email {
@@ -44,7 +42,7 @@
        border: none;
        padding: 10px;
        width: 100px;
-       color: black;
+       color: rgb(245, 241, 241);
    }
 
    .log-btn {
@@ -52,6 +50,7 @@
        margin: 40px;
        background: none;
        font-size: large;
+       color: white;
    }
 
    .sign-btn {
@@ -59,6 +58,7 @@
         margin: 40px;
         background: none;
         font-size: large;
+        color: white;
    }
 
    .email_two {
@@ -78,11 +78,12 @@
         margin: 40px;
         background: none;
         font-size: large;
+        color: white;
    }
 
    h1 {
        font-family: 'Fredoka One', cursive;
-       color: black;
+       color: rgb(245, 241, 241);
        -webkit-text-stroke-width: 2px;
    }
 

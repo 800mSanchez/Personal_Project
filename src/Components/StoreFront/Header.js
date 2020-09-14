@@ -21,7 +21,7 @@ class Header extends React.Component {
     render(){
         return <header>
             <div className='header-container'>
-            <h4>Locale</h4>
+            <h1>Locale</h1>
                 <div className="logout">
                  <button className="logout-btn" onClick={this.logout}><Link to="/">Logout</Link></button>
                 </div>

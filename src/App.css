@@ -1,10 +1,4 @@
 html { 
-  display: flex;
-  width: 100px;
-  height: 100px;
-  background: url(bean.png) no-repeat center fixed; 
- /*  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-  background-size: cover;
+  background: url("./webb.png") no-repeat center fixed; 
+  background-repeat: repeat;
 }

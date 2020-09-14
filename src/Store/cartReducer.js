@@ -7,6 +7,7 @@ const initialState = {
 };
 
 const GET_CART = "GET_CART";
+/* const DELETE_PRODUCT = "DELETE_PRODUCT" */
 
 export function getCart(){
     const cart = axios.get('/cart/inventory')
@@ -16,6 +17,15 @@ export function getCart(){
         payload: cart
     }
 }
+
+/* export function deleteProduct(){
+  const cart = axios.delete(`/cart/product/:cart_item_id`)
+  console.log(cart)
+  return {
+    type: DELETE_PRODUCT,
+    payload: cart
+  }
+} */
 
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
@@ -37,6 +47,23 @@ export default function reducer(state = initialState, action) {
           loading: false,
           errorMessage: "",
         };
+      /* case DELETE_PRODUCT + "_PENDING":
+        return {
+          ...state,
+          loading: true,
+        };
+      case DELETE_PRODUCT + "_REJECTED":
+        return {
+          ...state,
+          loading: false,
+          errorMessage: "axios request failed",
+        };
+      case DELETE_PRODUCT + "_FULFILLED":
+        return {
+          cart: payload,
+          loading: false,
+          errorMessage: "",
+        }; */
       default:
         return state;
     }

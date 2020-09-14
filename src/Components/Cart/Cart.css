@@ -1,7 +1,7 @@
 .cart-container {
-    width: 800px;
+    width: 700px;
     height: 500px;
-    margin-left: 50%;
+    margin-left: 30%;
     /* background-image: URL('../../bean.png');
     background-size: cover; */
     display: inline-block;
@@ -9,7 +9,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: white;
     font-size: xx-large;
 }
 
@@ -21,13 +21,14 @@
     align-content: center; */
     font-size: xx-large;
     font-family: 'Josefin Sans', sans-serif;
-    background-color: wheat;
+    background: linear-gradient(#00143e , #0f315f);
+    color: white;
 }
 
 .cart_inventory {
     margin: 20px;
     padding: 20px;
-    background-color: wheat;
+    background:linear-gradient(#00143e , #0f315f);
 }
 
 .bunch {

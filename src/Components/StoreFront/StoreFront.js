@@ -90,7 +90,7 @@ class StoreFront extends React.Component {
     const {isUploading} = this.state
     console.log(this.state.inventory)
     let allInventory = this.state.inventory.map(e => {
-      return <div>
+      return <div className="product">
               <div>Title: {e.title}</div>
               <div>Price: ${e.price}</div>
               <div>Location: {e.location}</div>
@@ -122,11 +122,11 @@ class StoreFront extends React.Component {
         <button className="add-btn" onClick={ () => this.addToCart(e.product_id)}>Add</button>
       </div>
     })
-    return <div className="storeContainer">
+    return <div>
       <div className='header'>
         <Header/>
       </div>
-      <p>Shop Local Business Nationwide</p>
+      <p className="info">Shop Local Business Nationwide</p>
       <div className="inventory">
         {allInventory}
       </div>

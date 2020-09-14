@@ -52,7 +52,7 @@ app.post('/store/product', storeCtrl.addProduct);
 
 app.get('/cart/inventory', cartCtrl.getCart);
 app.post('/cart/product', cartCtrl.addToCart);
-app.delete(`/cart/product/:cart_item_id`, cartCtrl.deleteProduct);
+app.delete('/cart/product/:cart_item_id', cartCtrl.deleteProduct);
 app.put(`/cart/product/:id`, cartCtrl.editQuantity);
 
 app.listen(SERVER_PORT, ()=> console.log(`Connected to port ${SERVER_PORT}`));
