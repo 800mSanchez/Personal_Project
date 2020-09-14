@@ -23,7 +23,7 @@ class Header extends React.Component {
             <div className='header-container'>
             <h1>Locale</h1>
                 <div className="logout">
-                 <button className="logout-btn" onClick={this.logout}><Link to="/">Logout</Link></button>
+                 <a className="logout-btn" onClick={this.logout}><Link to="/">Logout</Link></a>
                 </div>
                 <div className="cart">
                  <button className="cart-btn" onClick={this.cart}><Link to = "/cart">Cart</Link></button>

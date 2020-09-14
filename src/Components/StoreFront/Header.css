@@ -13,9 +13,11 @@ h1 {
 }
 
 .logout {
-    position: fixed;
+    display: flex;
+    
+   /*  position: fixed;
     top: 10px;
-    right: 10px;
+    right: 10px; */
 
 }
 
