@@ -11,10 +11,12 @@ class Cart extends React.Component {
         super(props)
         this.state ={
             cart: [],
-            cart_item_id: []
+            cart_item_id: [],
+            quantity: []
         }
         this.getCart = this.getCart.bind(this)
         this.deleteProduct = this.deleteProduct.bind(this)
+        this.editCart = this.editCart.bind(this)
     }
 
     componentDidMount(){
@@ -31,30 +33,30 @@ class Cart extends React.Component {
 
     deleteProduct(cart_item_id) {
         axios.delete(`/cart/product/${cart_item_id}`)
-        /* console.log(axios.delete) */
-        .then(res => console.log(res))
+        .then(res => this.getCart())
         .catch( err => console.log(err));
       }
 
-    /* editCart = (id) => {
+    editCart = (id) => {
         const {quantity} = this.state
-        axios.put(`/api/movies/title/${id}`, {title})
+        axios.put(`/cart/product/${id}`, {quantity})
         .then( res => {
           this.setState({
-            movies: res.data,
-            title: ""
+            cart: res.data,
+            quantity: res.data
           })
         }).catch(err => console.log(err))
-      } */
+      }
 
     render(){
         let cartInventory = this.state.cart.map(e => {
+            console.log(e)
             return <div className="bunch">
                     <div>Title: {e.title}</div>
                     <div>Price: ${e.price}</div>
-                    <div>Quantity: {e.quantity}</div>
-                    <button onClick={(/* e */) => this.deleteProduct(/* e.cart_item_id */)}>Delete</button>
-                    <button>Edit</button>
+                    <div /* onClick={() => this.editCart(e.quantity)} */>Quantity: {e.quantity}</div>
+                    <button onClick={() => this.deleteProduct(e.cart_item_id)}>Delete</button>
+                    <button onClick={() => this.editCart(e.id)}>Edit</button>
                   </div>
         })
         return (

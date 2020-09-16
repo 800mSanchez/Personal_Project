@@ -1,7 +1,7 @@
 .cart-container {
     width: 700px;
-    height: 500px;
-    margin-left: 30%;
+    height: 754px;
+    margin-left:30%;
     /* background-image: URL('../../bean.png');
     background-size: cover; */
     display: inline-block;
@@ -11,25 +11,22 @@
     align-items: center;
     color: white;
     font-size: xx-large;
+    background:linear-gradient(#00143e , #0f315f);
 }
 
 .welcome {
-    margin-left: 30%;
+    margin-left: 28%;
     display: inline-block;
     flex-direction: row;
-    /* justify-content: center;
-    align-content: center; */
     font-size: xx-large;
-    font-family: 'Josefin Sans', sans-serif;
-    background: linear-gradient(#00143e , #0f315f);
     color: white;
 }
 
-.cart_inventory {
+/* .cart_inventory {
     margin: 20px;
     padding: 20px;
     background:linear-gradient(#00143e , #0f315f);
-}
+} */
 
 .bunch {
     margin: 10px;
